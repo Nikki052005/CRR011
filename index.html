@@ -66,18 +66,35 @@
             Music Player with Song Selection
           </header>
         
-          <label for="songList">Select a song:</label>
+          <label for="songAlbum">Select a song:</label>
           <select id="songList" onchange="changeSong()">
-            <option value="https://drive.google.com/file/d/1JsqDbqlcnqqa-L_tEfrJL9Zbj4v9pDYo/view?usp=drive_link.mp3">Beat it</option>
-            <option value="path/to/song2.mp3">Song 2</option>
-            <option value="path/to/song3.mp3">Song 3</option>
-            <!-- Add more options for each song -->
+            <option value="https://drive.google.com/uc?id=FILE_ID_1">Beat it</option>
+            <option value="https://drive.google.com/uc?id=FILE_ID_2">Billie Jean</option>
+            <option value="https://drive.google.com/uc?id=FILE_ID_3">Cant help falling in love</option>
+            <option value="https://drive.google.com/uc?id=FILE_ID_4">Jam</option>
+           <option value="https://drive.google.com/uc?id=FILE_ID_5">Numb</option>    <!-- Add more options for each song --><audio controls>
+            <option value="https://drive.google.com/uc?id=FILE_ID_6">Sweet child O' Mine</option>
+                <option value="https://drive.google.com/uc?id=FILE_ID_7">Rumbling</option>
+                    <option value="https://drive.google.com/uc?id=FILE_ID_8">Thriller</option>
+                        <option value="https://drive.google.com/uc?id=FILE_ID_9">Until I found You</option>
+                            <option value="https://drive.google.com/uc?id=FILE_ID_10">We will rock you</option>
+
           </select>
         
           <audio controls id="audioPlayer">
             <!-- Audio player controls -->
-            <source src="" type="audio/mp3" id="audioSource">
-            Your browser does not support the audio tag.
+            <source src="path/to/Beat it.mp3" type="audio/mp3" id="audioSource">
+            <source src="path/to/Billie Jean.mp3" type="audio/mp3" id="audioSource">
+            <source src="path/to/Cant help falling in love.mp3" type="audio/mp3" id="audioSource">
+            <source src="path/to/Jam.mp3" type="audio/mp3" id="audioSource">
+            <source src="path/to/Numb.mp3" type="audio/mp3" id="audioSource">
+            <source src="path/to/Sweet child O' Mine.mp3" type="audio/mp3" id="audioSource">
+            <source src="path/to/Rumbling.mp3" type="audio/mp3" id="audioSource">
+            <source src="path/to/Thriller.mp3" type="audio/mp3" id="audioSource">
+            <source src="path/to/Until I found You.mp3" type="audio/mp3" id="audioSource">
+            <source src="path/to/We will rock you.mp3" type="audio/mp3" id="audioSource">
+           
+            Your browser does not support audio tag.
           </audio>
         
           <button onclick="playPause()">Play/Pause</button>
@@ -85,24 +102,41 @@
           <script>
             const audioPlayer = document.getElementById('audioPlayer');
             const audioSource = document.getElementById('audioSource');
-            const songList = document.getElementById('songList');
+            const songAlbum = document.getElementById('https://drive.google.com/uc?id=FILE_ID_');
         
             function changeSong() {
-              const selectedSong = songList.value;
+              const selectedSong = https://drive.google.com/uc?id=FILE_ID_;
               audioSource.src = selectedSong;
               audioPlayer.load(); // Load the new audio source
               audioPlayer.play(); // Start playing the new song
             }
         
-            function playPause() {
-              if (audioPlayer.paused) {
+            function playPause() 
+            {
+              if (audioPlayer.paused) 
+              {
                 audioPlayer.play();
-              } else {
+              } 
+              else
+               {
                 audioPlayer.pause();
               }
+
+
+
+
+
+              
             }
+            
           </script>
-        
+          <audio controls autoplay>
+            <source src="path/to/Beat it.ogg" type="audio/ogg">
+            <source src="path/to/Beat it.mp3" type="audio/mpeg">
+
+            Your browser does not support the audio element.
+          </audio>
+          
         </body>
         </html>
         </p>
