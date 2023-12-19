@@ -6,6 +6,105 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Hello Nikita</p>
+    <p><!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Music Player with Song Selection</title>
+          <style>
+            body {
+              font-family: 'Arial', sans-serif;
+              background-color: #f8f8f8; /* Light gray background color */
+              color: #333; /* Text color */
+              margin: 0;
+              padding: 0;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              height: 100vh;
+            }
+        
+            header {
+              background-color: #4caf50; /* Green background color */
+              color: #fff; /* Text color */
+              padding: 1rem;
+              text-align: center;
+              font-size: 1.5rem;
+              width: 100%;
+            }
+        
+            select {
+              margin-top: 20px;
+              padding: 10px;
+              font-size: 1rem;
+            }
+        
+            audio {
+              margin-top: 20px;
+            }
+        
+            button {
+              background-color: #4caf50; /* Green background color for the button */
+              color: #fff; /* Text color */
+              padding: 10px 20px;
+              font-size: 1rem;
+              border: none;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+            }
+        
+            button:hover {
+              background-color: #45a049; /* Darker green on hover */
+            }
+          </style>
+        </head>
+        <body>
+        
+          <header>
+            Music Player with Song Selection
+          </header>
+        
+          <label for="songList">Select a song:</label>
+          <select id="songList" onchange="changeSong()">
+            <option value="https://drive.google.com/file/d/1JsqDbqlcnqqa-L_tEfrJL9Zbj4v9pDYo/view?usp=drive_link.mp3">Beat it</option>
+            <option value="path/to/song2.mp3">Song 2</option>
+            <option value="path/to/song3.mp3">Song 3</option>
+            <!-- Add more options for each song -->
+          </select>
+        
+          <audio controls id="audioPlayer">
+            <!-- Audio player controls -->
+            <source src="" type="audio/mp3" id="audioSource">
+            Your browser does not support the audio tag.
+          </audio>
+        
+          <button onclick="playPause()">Play/Pause</button>
+        
+          <script>
+            const audioPlayer = document.getElementById('audioPlayer');
+            const audioSource = document.getElementById('audioSource');
+            const songList = document.getElementById('songList');
+        
+            function changeSong() {
+              const selectedSong = songList.value;
+              audioSource.src = selectedSong;
+              audioPlayer.load(); // Load the new audio source
+              audioPlayer.play(); // Start playing the new song
+            }
+        
+            function playPause() {
+              if (audioPlayer.paused) {
+                audioPlayer.play();
+              } else {
+                audioPlayer.pause();
+              }
+            }
+          </script>
+        
+        </body>
+        </html>
+        </p>
 </body>
 </html>
